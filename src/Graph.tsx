@@ -11,7 +11,8 @@ type GraphProps = {
 
 export type datapoint = {
    d: number,
-   x: number
+   c: number,
+   l: number
 }
 
 export class Graph  extends React.Component<GraphProps> {
