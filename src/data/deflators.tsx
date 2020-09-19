@@ -1,4 +1,4 @@
-export const deflators = {
+export const deflators:any = {
 "1946":	4.116,
 "1947":	4.116,
 "1948":	4.116,

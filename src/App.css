@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.recharts-cartesian-axis-tick-value {
+  font-size: 14
+}
+
+.recharts-cartesian-axis-tick {    
+    font-size: 1.0rem;
+    font-family: Roboto, sans-serif;
+}

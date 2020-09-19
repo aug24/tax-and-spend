@@ -1,4 +1,4 @@
-export const deficits = {
+export const deficits:any = {
 "1946":	0.6,
 "1947":	0.1,
 "1948":	-0.5,
