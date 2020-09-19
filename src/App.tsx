@@ -34,8 +34,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Provider store={store}>
-          <Graph key="graph" makeData={raw}/>
-          <Graph key="graph" makeData={cooked}/>
+          <Graph key="raw" makeData={raw}/>
+          <Graph key="cooked" makeData={cooked}/>
         </Provider>
       </header>
     </div>

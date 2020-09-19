@@ -1,7 +1,7 @@
 import React from 'react';
 import type { State } from './State';
 import { connect } from 'react-redux';
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { Tooltip, LineChart, Line, XAxis, YAxis } from 'recharts';
 
 type GraphProps = {
   makeData: () => datapoint[]
@@ -10,9 +10,11 @@ type GraphProps = {
 }
 
 export type datapoint = {
-   d: number,
-   c: number,
-   l: number
+   d: Date,
+   c: number | null,
+   l: number | null,
+   ct: number | null,
+   lt: number | null
 }
 
 export class Graph  extends React.Component<GraphProps> {
@@ -42,19 +44,39 @@ export class Graph  extends React.Component<GraphProps> {
                 <XAxis 
                   dataKey="d" 
                 />
- I              <YAxis />
+                <YAxis yAxisId="left"/>
+                <YAxis orientation='right' yAxisId="right"/>
+ I              <Tooltip />
                 <Line 
+                  yAxisId="left"
                   animationDuration={1}
                   type="monotone" 
                   dataKey="l" 
                   stroke="#ff0000" 
-                  yAxisId={0} />
+                />
                 <Line 
+                  yAxisId="left"
                   animationDuration={1}
                   type="monotone" 
                   dataKey="c" 
                   stroke="#0000ff" 
-                  yAxisId={0} />
+                />
+/*
+                <Line 
+                  yAxisId="right"
+                  animationDuration={1}
+                  type="monotone" 
+                  dataKey="lt" 
+                  stroke="#ff8888" 
+                />
+                <Line 
+                  yAxisId="right"
+                  animationDuration={1}
+                  type="monotone" 
+                  dataKey="ct" 
+                  stroke="#8888ff" 
+                />
+*/
               </LineChart>
             </div>
         );

@@ -1,10 +1,10 @@
-export const elections = [
-  { date: "5 July 1945", winner: "L" },
-  { date: "25 October 1951", winner: "C" },
-  { date: "5 October 1964", winner: "L" },
-  { date: "18 June 1970", winner: "C" },
-  { date: "28 February 1974", winner: "L" },
-  { date: "3 May 1979", winner: "C" },
-  { date: "1 May 1997", winner: "L" },
-  { date: "6 May 2010", winner: "C" }
+export const elections:any = [
+  { f: "19450705", t: "19511024", winner: "L" },
+  { f: "19511025", t: "19641004", winner: "C" },
+  { f: "19641005", t: "19700617", winner: "L" },
+  { f: "19700618", t: "19740227", winner: "C" },
+  { f: "19740228", t: "19790502", winner: "L" },
+  { f: "19790503", t: "19970430", winner: "C" },
+  { f: "19970501", t: "20100505", winner: "L" },
+  { f: "20100506", t: "20200914", winner: "C" }
 ]
